@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Timer from "./page"
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,7 +22,6 @@ export default function RootLayout({ children }) {
     <html lang="es">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
-      <Timer></Timer>
       </body>
     </html>
   );
