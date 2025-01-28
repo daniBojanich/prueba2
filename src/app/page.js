@@ -17,15 +17,18 @@ export default function Home2() {
 
   return (
     <>
-      <div className={styles.ctas}>
-        <button className={styles.primary} onClick={toggleLanguage}>{language === "es" ? "Switch to English" : "Cambiar a Español"}</button>
-        
-      </div>
-
       <div className="container">
+      
+        <header className="flex-r">
+          <div className={styles.ctas}>
+            <button className={styles.primary} onClick={toggleLanguage}>
+              {language === "es" ? "Switch to English" : "Cambiar a Español"}
+            </button>
+          </div>
+        </header>
+
         <h1>{language === "es" ? 'Portfolio de animaciones ".SVG"' : '".SVG" animation portfolio'}</h1>
         {/* https://help.lottiefiles.com/hc/en-us/articles/4887671268249-Sync-Lottie-with-scroll */}
-
         <div className="lotties flex-vertical">
           <h2>{language === "es" ? "Animaciones de procesos digitales" : "Digital process animation"}</h2>
           <p>{language === "es" ? "Barras de carga, indicador de espera, etc" : "Loading bars, waiting symbols, etc."}</p>
@@ -34,7 +37,6 @@ export default function Home2() {
             <DotLottieReact className="lottie" speed="1" mode="normal" direction="1" background="transparent" src="img/Dots.json" loop="true" autoplay="true" />
           </div>
         </div>
-
         <div className="lotties flex-vertical">
           <h2>{language === "es" ? "Animaciones experimentales o decorativas" : "Decorative or experimental animations"}</h2>
 
@@ -46,7 +48,6 @@ export default function Home2() {
             <DotLottieReact className="lottie" speed="1" mode="normal" direction="1" background="transparent" src="img/estrella.json" loop="true" autoplay="true"></DotLottieReact>
           </div>
         </div>
-
         <div className="lotties flex-vertical">
           <h2>{language === "es" ? "Set de animaciones para su empresa" : "Animation sets for your businness"}</h2>
           <p>
@@ -235,6 +236,7 @@ export default function Home2() {
               autoplay="true"></DotLottieReact>
           </div>
         </div>
+        <footer><p>Hecho por Daniela Bojanich ✨ 2025</p></footer>
       </div>
     </>
   );

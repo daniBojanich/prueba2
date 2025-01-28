@@ -53,6 +53,7 @@ width: 80vw;
 .lotties{
   /* margin: 20px; */
   margin-top: 35px;
+  margin-bottom: 40px;
 }
 
 .flex {
@@ -64,6 +65,13 @@ width: 80vw;
   width: 80vw;
   height: auto;
   gap:5px;
+}
+.flex-r{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .flex-vertical {
@@ -101,4 +109,6 @@ h2 {
   }
 }
 
-
+footer{
+  margin:40px;
+}
