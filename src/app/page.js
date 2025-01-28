@@ -236,7 +236,7 @@ export default function Home2() {
               autoplay="true"></DotLottieReact>
           </div>
         </div>
-        <footer><p>Hecho por Daniela Bojanich ✨ 2025</p></footer>
+        <footer><p>{language === "es" ? 'Hecho por Daniela Bojanich ✨ 2025' : 'Made by Daniela Bojanich ✨ 2025'}</p></footer>
       </div>
     </>
   );
