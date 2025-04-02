@@ -35,6 +35,7 @@ export default function Home2() {
 
           <div className="flex">
             <DotLottieReact className="lottie" speed="1" mode="normal" direction="1" background="transparent" src="img/Dots.json" loop="true" autoplay="true" />
+            <DotLottieReact className="lottie" speed="1" mode="normal" direction="1" background="transparent" src="img/Estrellitas.json" loop="true" autoplay="true" />
           </div>
         </div>
         <div className="lotties flex-vertical">
