@@ -47,6 +47,7 @@ export default function Home2() {
             <DotLottieReact className="lottie" speed="1" mode="normal" direction="1" background="transparent" src="img/lineas.json" loop="true" autoplay="true"></DotLottieReact>
             <DotLottieReact className="lottie" speed="1" mode="normal" direction="1" background="transparent" src="img/sol.json" loop="true" autoplay="true"></DotLottieReact>
             <DotLottieReact className="lottie" speed="1" mode="normal" direction="1" background="transparent" src="img/estrella.json" loop="true" autoplay="true"></DotLottieReact>
+            <DotLottieReact className="lottie" speed="1" mode="normal" direction="1" background="transparent" src="img/Cubo2.json" loop="true" autoplay="true"></DotLottieReact>
           </div>
         </div>
         <div className="lotties flex-vertical">
