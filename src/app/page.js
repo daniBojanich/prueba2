@@ -19,7 +19,7 @@ export default function Home2() {
     <>
       <div className="container">
       
-        <header className="flex-r">
+        <header className="flex-l">
           <div className={styles.ctas}>
             <button className={styles.primary} onClick={toggleLanguage}>
               {language === "es" ? "Switch to English" : "Cambiar a Español"}
@@ -36,6 +36,7 @@ export default function Home2() {
           <div className="flex">
             <DotLottieReact className="lottie" speed="1" mode="normal" direction="1" background="transparent" src="img/Dots.json" loop="true" autoplay="true" />
             <DotLottieReact className="lottie" speed="1" mode="normal" direction="1" background="transparent" src="img/Estrellitas.json" loop="true" autoplay="true" />
+              <DotLottieReact className="lottie" speed="1" mode="normal" direction="1" background="transparent" src="img/LiquidBall.json" loop="true" autoplay="true" />
           </div>
         </div>
         <div className="lotties flex-vertical">
