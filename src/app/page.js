@@ -27,6 +27,19 @@ export default function Home2() {
           </div>
         </header>
 
+
+<section className="hero">
+  <h2>{language === "es" ? "Hola, soy Daniela" : "Hi, I'm Daniela"}</h2>
+  <p>
+    {language === "es"
+      ? "Soy diseñadora gráfica graduada y me he especializado en animación y motion graphics. También hago interfaces para webs y apps."
+      : "I'm a graduate graphic designer, specializing in animation and motion graphics. I also design interfaces for websites and apps."}
+  </p>
+  {/* <a className="cta-button" href="#lotties">
+    {language === "es" ? "Ver trabajos" : "See my work"}
+  </a> */}
+<h3><a href="https://www.upwork.com/freelancers/danielabojanich">Contact me via Upwork</a></h3>
+</section>
         <h1>{language === "es" ? 'Portfolio de animaciones ".SVG"' : '".SVG" animation portfolio'}</h1>
         {/* https://help.lottiefiles.com/hc/en-us/articles/4887671268249-Sync-Lottie-with-scroll */}
         <div className="lotties flex-vertical">
@@ -239,7 +252,14 @@ export default function Home2() {
               autoplay="true"></DotLottieReact>
           </div>
         </div>
-        <footer><p>{language === "es" ? 'Hecho por Daniela Bojanich ✨ 2025' : 'Made by Daniela Bojanich ✨ 2025'}</p></footer>
+       <footer id="contact">
+  <p>{language === "es" ? "Hecho por Daniela Bojanich ✨ 2025" : "Made by Daniela Bojanich ✨ 2025"}</p>
+  <ul className="social">
+    <li><a href="https://www.behance.net/danielabojanich" target="_blank">Behance</a></li>
+    <li><a href="https://www.linkedin.com/in/danielabojanich/" target="_blank">LinkedIn</a></li>
+    <li><a href="mailto:danielabojanich@gmail.com" target="_blank">Mail</a></li>
+  </ul>
+</footer>
       </div>
     </>
   );
