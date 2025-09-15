@@ -7,6 +7,7 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 // import { Player } from "@lottiefiles/react-lottie-player";
 import { useState } from "react";
 import styles from "./page.module.css";
+import Rive from '@rive-app/react-canvas';
 
 export default function Home2() {
   const [language, setLanguage] = useState("es"); // Idioma por defecto: español
@@ -56,6 +57,10 @@ export default function Home2() {
           <h2>{language === "es" ? "Animaciones experimentales o decorativas" : "Decorative or experimental animations"}</h2>
 
           <div className="flex">
+            <Rive
+    src="img/rive/cafecito.riv"
+    stateMachines="cafecitoanim" className="lottie"
+  />
             <DotLottieReact className="lottie" speed="1" mode="normal" direction="1" background="transparent" src="img/maceta.json" loop="true" autoplay="true"></DotLottieReact>
             <DotLottieReact className="lottie" speed="1" mode="normal" direction="1" background="transparent" src="img/circulos.json" loop="true" autoplay="true"></DotLottieReact>
             <DotLottieReact className="lottie" speed="1" mode="normal" direction="1" background="transparent" src="img/lineas.json" loop="true" autoplay="true"></DotLottieReact>
