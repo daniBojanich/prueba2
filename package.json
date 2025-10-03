@@ -19,5 +19,12 @@
     "@eslint/eslintrc": "^3",
     "eslint": "^9",
     "eslint-config-next": "15.5.3"
-  }
+  },
+  "scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start",
+  "gen:lotties": "node scripts/generateLotties.js"
+}
+
 }

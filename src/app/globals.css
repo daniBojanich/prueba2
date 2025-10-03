@@ -101,10 +101,10 @@ h2 {
 .lottie {
   border: 2px solid rgb(173, 142, 193);
   border-radius: 8px;
-  transition: transform 0.06s;
+  transition: transform 0.02s;
   background-color: #fff;
-  height: 150px;
-  width: 150px;
+  height: 250px;
+  width: 250px;
   &:hover {
     transform: scale(1.2);
   }

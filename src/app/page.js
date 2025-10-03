@@ -1,4 +1,9 @@
 "use client";
+// import lotties from "@/js/lotties.json";   // importa tu array
+import lottiesWork from "@/js/lottiesWork.json"; // importa tu array
+import lottiesArt from "@/js/lottiesArt.json";
+import lottiesLoaders from "@/js/lottiesLoaders.json";
+import LottieContainer from "./containers/LottieContainer";
 // import Image from "next/image";
 // import styles from "./page.module.css";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
@@ -7,7 +12,7 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 // import { Player } from "@lottiefiles/react-lottie-player";
 import { useState } from "react";
 import styles from "./page.module.css";
-import Rive from '@rive-app/react-canvas';
+import Rive from "@rive-app/react-canvas";
 
 export default function Home2() {
   const [language, setLanguage] = useState("es"); // Idioma por defecto: español
@@ -19,7 +24,6 @@ export default function Home2() {
   return (
     <>
       <div className="container">
-      
         <header className="flex-l">
           <div className={styles.ctas}>
             <button className={styles.primary} onClick={toggleLanguage}>
@@ -28,45 +32,34 @@ export default function Home2() {
           </div>
         </header>
 
-
-<section className="hero">
-  <h2>{language === "es" ? "Hola, soy Daniela" : "Hi, I'm Daniela"}</h2>
-  <p>
-    {language === "es"
-      ? "Soy diseñadora gráfica graduada y me he especializado en animación y motion graphics. También hago interfaces para webs y apps."
-      : "I'm a graduate graphic designer, specializing in animation and motion graphics. I also design interfaces for websites and apps."}
-  </p>
-  {/* <a className="cta-button" href="#lotties">
+        <section className="hero">
+          <h2>{language === "es" ? "Hola, soy Daniela" : "Hi, I'm Daniela"}</h2>
+          <p>
+            {language === "es"
+              ? "Soy diseñadora gráfica graduada y me he especializado en animación y motion graphics. También hago interfaces para webs y apps."
+              : "I'm a graduate graphic designer, specializing in animation and motion graphics. I also design interfaces for websites and apps."}
+          </p>
+          {/* <a className="cta-button" href="#lotties">
     {language === "es" ? "Ver trabajos" : "See my work"}
-  </a> */}
-<h3><a href="https://www.upwork.com/freelancers/danielabojanich">Contact me via Upwork</a></h3>
-</section>
+    </a> */}
+          <h3>
+            <a href="https://www.upwork.com/freelancers/danielabojanich">Contact me via Upwork</a>
+          </h3>
+        </section>
         <h1>{language === "es" ? 'Portfolio de animaciones ".SVG"' : '".SVG" animation portfolio'}</h1>
         {/* https://help.lottiefiles.com/hc/en-us/articles/4887671268249-Sync-Lottie-with-scroll */}
         <div className="lotties flex-vertical">
           <h2>{language === "es" ? "Animaciones de procesos digitales" : "Digital process animation"}</h2>
           <p>{language === "es" ? "Barras de carga, indicador de espera, etc" : "Loading bars, waiting symbols, etc."}</p>
 
-          <div className="flex">
-            <DotLottieReact className="lottie" speed="1" mode="normal" direction="1" background="transparent" src="img/Dots.json" loop="true" autoplay="true" />
-            <DotLottieReact className="lottie" speed="1" mode="normal" direction="1" background="transparent" src="img/Estrellitas.json" loop="true" autoplay="true" />
-              <DotLottieReact className="lottie" speed="1" mode="normal" direction="1" background="transparent" src="img/LiquidBall.json" loop="true" autoplay="true" />
-          </div>
+          <LottieContainer files={lottiesLoaders} basePath="img/loaders" />
         </div>
         <div className="lotties flex-vertical">
           <h2>{language === "es" ? "Animaciones experimentales o decorativas" : "Decorative or experimental animations"}</h2>
 
           <div className="flex">
-            <Rive
-    src="img/rive/cafecito.riv"
-    stateMachines="cafecitoanim" className="lottie"
-  />
-            <DotLottieReact className="lottie" speed="1" mode="normal" direction="1" background="transparent" src="img/maceta.json" loop="true" autoplay="true"></DotLottieReact>
-            <DotLottieReact className="lottie" speed="1" mode="normal" direction="1" background="transparent" src="img/circulos.json" loop="true" autoplay="true"></DotLottieReact>
-            <DotLottieReact className="lottie" speed="1" mode="normal" direction="1" background="transparent" src="img/lineas.json" loop="true" autoplay="true"></DotLottieReact>
-            <DotLottieReact className="lottie" speed="1" mode="normal" direction="1" background="transparent" src="img/sol.json" loop="true" autoplay="true"></DotLottieReact>
-            <DotLottieReact className="lottie" speed="1" mode="normal" direction="1" background="transparent" src="img/estrella.json" loop="true" autoplay="true"></DotLottieReact>
-            <DotLottieReact className="lottie" speed="1" mode="normal" direction="1" background="transparent" src="img/Cubo2.json" loop="true" autoplay="true"></DotLottieReact>
+            <Rive src="img/rive/cafecito.riv" stateMachines="cafecitoanim" className="lottie" />
+            <LottieContainer files={lottiesArt} basePath="img/art" />
           </div>
         </div>
         <div className="lotties flex-vertical">
@@ -76,195 +69,29 @@ export default function Home2() {
           </p>
 
           <div className="flex">
-            <DotLottieReact
-              className="lottie"
-              speed="1"
-              mode="normal"
-              direction="1"
-              background="transparent"
-              src="img/animacionesWork/1_Local SEO Optimization.json"
-              loop="true"
-              autoplay="true"></DotLottieReact>
-
-            <DotLottieReact
-              className="lottie"
-              speed="1"
-              mode="normal"
-              direction="1"
-              background="transparent"
-              src="img/animacionesWork/2_Technical SEO Audits.json"
-              loop="true"
-              autoplay="true"></DotLottieReact>
-
-            <DotLottieReact
-              className="lottie"
-              speed="1"
-              mode="normal"
-              direction="1"
-              background="transparent"
-              src="img/animacionesWork/3_Keyword Research.json"
-              loop="true"
-              autoplay="true"></DotLottieReact>
-
-            <DotLottieReact
-              className="lottie"
-              speed="1"
-              mode="normal"
-              direction="1"
-              background="transparent"
-              src="img/animacionesWork/4_Local Citations.json"
-              loop="true"
-              autoplay="true"></DotLottieReact>
-
-            <DotLottieReact className="lottie " speed="1" mode="normal" direction="1" background="transparent" src="img/animacionesWork/5_Backlinks.json" loop="true" autoplay="true"></DotLottieReact>
-
-            <DotLottieReact
-              className="lottie"
-              speed="1"
-              mode="normal"
-              direction="1"
-              background="transparent"
-              src="img/animacionesWork/6_Press Release.json"
-              loop="true"
-              autoplay="true"></DotLottieReact>
-
-            <DotLottieReact
-              className="lottie"
-              speed="1"
-              mode="normal"
-              direction="1"
-              background="transparent"
-              src="img/animacionesWork/7_Competitor Analysis.json"
-              loop="true"
-              autoplay="true"></DotLottieReact>
-
-            <DotLottieReact
-              className="lottie"
-              speed="1"
-              mode="normal"
-              direction="1"
-              background="transparent"
-              src="img/animacionesWork/8_Geo-Targeted Landing Pages.json"
-              loop="true"
-              autoplay="true"></DotLottieReact>
-
-            <DotLottieReact
-              className="lottie"
-              speed="1"
-              mode="normal"
-              direction="1"
-              background="transparent"
-              src="img/animacionesWork/9_Website Design & Development.json"
-              loop="true"
-              autoplay="true"></DotLottieReact>
-
-            <DotLottieReact className="lottie " speed="1" mode="normal" direction="1" background="transparent" src="img/animacionesWork/10_Ad Design.json" loop="true" autoplay="true"></DotLottieReact>
-
-            <DotLottieReact
-              className="lottie"
-              speed="1"
-              mode="normal"
-              direction="1"
-              background="transparent"
-              src="img/animacionesWork/11_Infographic Design.json"
-              loop="true"
-              autoplay="true"></DotLottieReact>
-
-            <DotLottieReact
-              className="lottie"
-              speed="1"
-              mode="normal"
-              direction="1"
-              background="transparent"
-              src="img/animacionesWork/12_Custom Web Development.json"
-              loop="true"
-              autoplay="true"></DotLottieReact>
-
-            <DotLottieReact
-              className="lottie"
-              speed="1"
-              mode="normal"
-              direction="1"
-              background="transparent"
-              src="img/animacionesWork/13_Conversion Rate Optimization.json"
-              loop="true"
-              autoplay="true"></DotLottieReact>
-
-            <DotLottieReact
-              className="lottie"
-              speed="1"
-              mode="normal"
-              direction="1"
-              background="transparent"
-              src="img/animacionesWork/14_Content Marketing.json"
-              loop="true"
-              autoplay="true"></DotLottieReact>
-
-            <DotLottieReact className="lottie" speed="1" mode="normal" direction="1" background="transparent" src="img/animacionesWork/15_Ads Copy.json" loop="true" autoplay="true"></DotLottieReact>
-
-            <DotLottieReact className="lottie" speed="1" mode="normal" direction="1" background="transparent" src="img/animacionesWork/16_Blogs.json" loop="true" autoplay="true"></DotLottieReact>
-
-            <DotLottieReact className="lottie" speed="1" mode="normal" direction="1" background="transparent" src="img/animacionesWork/17_Articles.json" loop="true" autoplay="true"></DotLottieReact>
-
-            <DotLottieReact
-              className="lottie"
-              speed="1"
-              mode="normal"
-              direction="1"
-              background="transparent"
-              src="img/animacionesWork/18_Social Media Ads.json"
-              loop="true"
-              autoplay="true"></DotLottieReact>
-
-            <DotLottieReact
-              className="lottie"
-              speed="1"
-              mode="normal"
-              direction="1"
-              background="transparent"
-              src="img/animacionesWork/19_PPC Campaign.json"
-              loop="true"
-              autoplay="true"></DotLottieReact>
-
-            <DotLottieReact
-              className="lottie"
-              speed="1"
-              mode="normal"
-              direction="1"
-              background="transparent"
-              src="img/animacionesWork/20_Analytics & Reporting.json"
-              loop="true"
-              autoplay="true"></DotLottieReact>
-
-            <DotLottieReact
-              className="lottie"
-              speed="1"
-              mode="normal"
-              direction="1"
-              background="transparent"
-              src="img/animacionesWork/21_Reputation Management.json"
-              loop="true"
-              autoplay="true"></DotLottieReact>
-
-            <DotLottieReact
-              className="lottie"
-              speed="1"
-              mode="normal"
-              direction="1"
-              background="transparent"
-              src="img/animacionesWork/22_Email Marketing.json"
-              loop="true"
-              autoplay="true"></DotLottieReact>
+            <LottieContainer files={lottiesWork} basePath="img/animacionesWork" />
           </div>
         </div>
-       <footer id="contact">
-  <p>{language === "es" ? "Hecho por Daniela Bojanich ✨ 2025" : "Made by Daniela Bojanich ✨ 2025"}</p>
-  <ul className="social">
-    <li><a href="https://www.behance.net/danielabojanich" target="_blank">Behance</a></li>
-    <li><a href="https://www.linkedin.com/in/danielabojanich/" target="_blank">LinkedIn</a></li>
-    <li><a href="mailto:danielabojanich@gmail.com" target="_blank">Mail</a></li>
-  </ul>
-</footer>
+        <footer id="contact">
+          <p>{language === "es" ? "Hecho por Daniela Bojanich ✨ 2025" : "Made by Daniela Bojanich ✨ 2025"}</p>
+          <ul className="social">
+            <li>
+              <a href="https://www.behance.net/danielabojanich" target="_blank">
+                Behance
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/danielabojanich/" target="_blank">
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href="mailto:danielabojanich@gmail.com" target="_blank">
+                Mail
+              </a>
+            </li>
+          </ul>
+        </footer>
       </div>
     </>
   );
